@@ -30,7 +30,6 @@
                             <h3>{{ post.title }}</h3>
                             <p>{{ post.body }}</p>
                             <p><a href="{% url 'post_detail_view' post.id %}" class="btn btn-sm btn-primary">Read More</a></p>
-</p>
 
                         </div>
                     </div>
@@ -41,24 +40,24 @@
     </div>
 
 
-    <div class="row text-start pt-5 border-top">
-        <div class="col-md-12">
-            <!--
-              **==========
-              NOTE:
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/
-              **==========
-            -->
-            <div class="custom-pagination">
-                <span>1</span>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <span>...</span>
-                <a href="#">15</a>
-            </div>
-        </div>
-    </div>
+{#    <div class="row text-start pt-5 border-top">#}
+{#        <div class="col-md-12">#}
+{#            <!--#}
+{#              **==========#}
+{#              NOTE:#}
+{#              Please don't remove this copyright link unless you buy the license here https://untree.co/license/#}
+{#              **==========#}
+{#            -->#}
+{#            <div class="custom-pagination">#}
+{#                <span>1</span>#}
+{#                <a href="#">2</a>#}
+{#                <a href="#">3</a>#}
+{#                <a href="#">4</a>#}
+{#                <span>...</span>#}
+{#                <a href="#">15</a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
 {% endblock content %}

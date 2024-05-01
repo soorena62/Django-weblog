@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}
+    Sign Up
+{% endblock title %}
+
+{% block name %}
+    F I F I N G O O L I
+{% endblock name %}
+
+{% block content %}
+    <div class="container mt-3">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success" type="submit">SignUp</button>
+            <div
+                    class="container mt-3">
+            </div>
+        </form>
+    </div>
+{% endblock content %}

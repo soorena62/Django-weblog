@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}
+    Delete Post
+{% endblock title %}
+
+{% block name %}
+    F I F I N G O O L I
+{% endblock name %}
+
+{% block content %}
+    <div class="container">
+        <div class="card shadow my-3 py-5">
+            <h1>Are You Sure?</h1>
+            <p>Are You Sure You Want To Delete {{ post.title }} Post Permanently?</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input class="btn btn-danger" type="submit" value="Yes, Delete">
+            </form>
+        </div>
+    </div>
+{% endblock content %}
