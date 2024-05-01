@@ -1,0 +1,64 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Majid's Weblog
+{% endblock title %}
+
+{% block name %}
+    F I F I N G O O L I
+{% endblock name %}
+
+{% block content %}
+
+    <div class="section search-result-wrap">
+        <div class="container">
+            {% for post in posts %}
+            	<div class="card shadow-sm my-3">
+                <div class="col-lg-8">
+                    <div class="blog-entry d-flex blog-entry-search-item">
+                        <a href="#" class="img-link me-4">
+                            <img src="{% static 'images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+                        </a>
+                        <div>
+                            <div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="{% static 'images/person_5.jpg' %}" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">{{ post.author }}</a></span>
+								<span>&nbsp;-&nbsp; {{ post.created_date }}</span>
+							</div>
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.body }}</p>
+                            <p><a href="{% url 'post_detail_view' post.id %}" class="btn btn-sm btn-primary">Read More</a></p>
+</p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="row text-start pt-5 border-top">
+        <div class="col-md-12">
+            <!--
+              **==========
+              NOTE:
+              Please don't remove this copyright link unless you buy the license here https://untree.co/license/
+              **==========
+            -->
+            <div class="custom-pagination">
+                <span>1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <span>...</span>
+                <a href="#">15</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
